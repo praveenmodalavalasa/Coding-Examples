@@ -1,0 +1,94 @@
+// 3Rd Question
+
+const first = (input, n) => {
+    if (!input.length || n <= 0) {
+        return [];
+    }
+    else if (!n && input.length) {
+        return input[0];
+    }
+    else {
+        const result = [];
+        if (n > input.length) n = input.length;
+        for (let i = 0; i < n; i++) {
+            result.push(input[i]);
+        }
+        return result;
+    }
+}
+console.log(first([1,2,3,4,5],3));
+
+
+
+// 4Th Questions
+
+const last = (input, n) => {
+    if (!n && input.length) {
+       return input.at(-1);
+   }
+   else {
+       const result = [];
+       if (n > input.length) n = input.length;
+       for (let i = input.length-n; i <= input.length-1; i++) {
+           result.push(input[i]);
+       }
+       return result;
+   }
+}
+console.log(last([1,2,3,4,5],3));
+
+
+// 7th Question
+
+const Numbers =["7", "26", "42", "56"];
+Numbers.sort((a, b) => a-b);
+console.log(Numbers)
+
+
+
+
+// 8Th Question
+
+const arr1=['3', 'a', 'a', 'a', '2', '3', 'a', '3', 'a' , '2' , '4', '9' , '3'];
+const obj = {};
+
+for (let i=0; i<arr1.length; i++) {
+    if (obj[arr1[i]]){
+        obj[arr1[i]] += 1;
+    }
+    else {
+        obj[arr1[i]] = 1;
+    }
+}
+console.log(obj);
+const result = Object.entries(obj).sort((a,b) => b[1]-a[1])
+console.log(result[0][0] + " ( " + result[0][1]+" " + "times )")
+
+
+// 5Th Question
+
+const array = ["Red", "Green", "White", "Black"];
+const result = array.join(',');
+let str = "";
+for (let i = 0; i < array.length; i++) {
+    str += array[i]+",";
+}
+console.log(str)
+console.log(result);
+
+
+// 9Th Question
+
+var swap = function(letters){
+    for(var  i =0; i<letters.length; i++){
+        if(letters[i] === letters[i].toLowerCase()){
+            letters[i] = letters[i].toUpperCase();
+        }else {
+            letters[i] = letters[i].toLowerCase();
+        }
+    }
+   console.log(letters);
+}
+var text = ('The Quick Brown Fox') ;
+swap(text);
+console.log(swap(text));
