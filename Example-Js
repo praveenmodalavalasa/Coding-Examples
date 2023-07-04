@@ -40,10 +40,9 @@ console.log(last([1,2,3,4,5],3));
 
 // 7th Question
 
-const Numbers =["7", "26", "42", "56"];
+const Numbers =["9", "4", "74", "56"];
 Numbers.sort((a, b) => a-b);
 console.log(Numbers)
-
 
 
 
@@ -92,3 +91,7 @@ var swap = function(letters){
 var text = ('The Quick Brown Fox') ;
 swap(text);
 console.log(swap(text));
+
+
+// 1st Question
+
