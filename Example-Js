@@ -95,3 +95,58 @@ console.log(swap(text));
 
 // 1st Question
 
+const is_array = (num) => {
+    if (typeof (num) === 'object')
+    {
+        if(num[0] || num.length === 0)
+        {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    else {
+        return false;
+    }
+}
+
+console.log(is_array("a"));
+
+
+// 11Th Question
+
+const test = [0,1,2,3,4];
+let result = 0;
+
+const sum_of_squares = (input) => {
+    for (let i = 0; i < input.length; i++) {
+        result += input[i]*input[i];
+    }
+    return result;
+}
+console.log(sum_of_squares(test))
+
+
+// 6Th Question
+
+const test = "025468";
+var result = "";
+const insert_dashes = (input) => {
+    result += input[0];
+    for(let i = 1; i < input.length; i++) {
+        if (input[i-1]%2 === 0 && input[i]%2 === 0)
+        {
+            result += "-";
+        }
+        result += input[i];
+    }
+    return result;
+}
+console.log(insert_dashes(test));
+
+const insert_dashes_1 = (input) => 
+input.map((num, i, arr) => 
+(num%2===0 && arr.at(-1) !== num && arr[i+1]%2 === 0) ? num + "-" : num).join("");
+
+console.log(insert_dashes_1(test.split('')));
