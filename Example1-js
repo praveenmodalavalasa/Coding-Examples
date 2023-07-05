@@ -65,3 +65,7 @@ const sum_and_prod = (input) => {
     return [sum, prod];
 }
 console.log(sum_and_prod(Number));
+
+
+// 13th Question
+
