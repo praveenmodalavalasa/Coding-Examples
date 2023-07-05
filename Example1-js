@@ -1,0 +1,56 @@
+// 5Th Question
+
+const array = ["Red", "Green", "White", "Black"];
+const result1 = array.join(',');
+let str = "";
+for (let i = 0; i < array.length; i++) {
+    str += array[i]+",";
+}
+console.log(str)
+console.log(result1);
+
+
+// 6Th Question
+
+const test = "025468";
+var result = "";
+const insert_dashes = (input) => {
+    result += input[0];
+    for(let i = 1; i < input.length; i++) {
+        if (input[i-1]%2 === 0 && input[i]%2 === 0)
+        {
+            result += "-";
+        }
+        result += input[i];
+    }
+    return result;
+}
+console.log(insert_dashes(test));
+
+const insert_dashes_1 = (input) => 
+input.map((num, i, arr) => 
+(num%2===0 && arr.at(-1) !== num && arr[i+1]%2 === 0) ? num + "-" : num).join("");
+
+console.log(insert_dashes_1(test.split('')));
+
+
+// 8Th Question
+
+const arr1=['3', 'a', 'a', 'a', '2', '3', 'a', '3', 'a' , '2' , '4', '9' , '3'];
+const obj = {};
+
+for (let i=0; i<arr1.length; i++) {
+    if (obj[arr1[i]]){
+        obj[arr1[i]] += 1;
+    }
+    else {
+        obj[arr1[i]] = 1;
+    }
+}
+console.log(obj);
+const result3 = Object.entries(obj).sort((a,b) => b[1]-a[1])
+console.log(result3[0][0] + " ( " + result3[0][1]+" " + "times )")
+
+
+// 12Th Question
+

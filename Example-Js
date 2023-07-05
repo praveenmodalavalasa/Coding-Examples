@@ -59,67 +59,11 @@ const last = (input, n) => {
 console.log(last([1,2,3,4,5],3));
 
 
-
-// 5Th Question
-
-const array = ["Red", "Green", "White", "Black"];
-const result = array.join(',');
-let str = "";
-for (let i = 0; i < array.length; i++) {
-    str += array[i]+",";
-}
-console.log(str)
-console.log(result);
-
-
-// 6Th Question
-
-const test = "025468";
-var result = "";
-const insert_dashes = (input) => {
-    result += input[0];
-    for(let i = 1; i < input.length; i++) {
-        if (input[i-1]%2 === 0 && input[i]%2 === 0)
-        {
-            result += "-";
-        }
-        result += input[i];
-    }
-    return result;
-}
-console.log(insert_dashes(test));
-
-const insert_dashes_1 = (input) => 
-input.map((num, i, arr) => 
-(num%2===0 && arr.at(-1) !== num && arr[i+1]%2 === 0) ? num + "-" : num).join("");
-
-console.log(insert_dashes_1(test.split('')));
-
-
 // 7th Question
 
 const Numbers =["9", "4", "74", "56"];
 Numbers.sort((a, b) => a-b);
 console.log(Numbers)
-
-
-
-// 8Th Question
-
-const arr1=['3', 'a', 'a', 'a', '2', '3', 'a', '3', 'a' , '2' , '4', '9' , '3'];
-const obj = {};
-
-for (let i=0; i<arr1.length; i++) {
-    if (obj[arr1[i]]){
-        obj[arr1[i]] += 1;
-    }
-    else {
-        obj[arr1[i]] = 1;
-    }
-}
-console.log(obj);
-const result = Object.entries(obj).sort((a,b) => b[1]-a[1])
-console.log(result[0][0] + " ( " + result[0][1]+" " + "times )")
 
 
 // 9Th Question
@@ -140,7 +84,7 @@ console.log(swap(text));
 
 // 11Th Question
 
-const test = [0,1,2,3,4];
+const test1 = [0,1,2,3,4];
 let result = 0;
 
 const sum_of_squares = (input) => {
@@ -149,4 +93,12 @@ const sum_of_squares = (input) => {
     }
     return result;
 }
-console.log(sum_of_squares(test))
+console.log(sum_of_squares(test1))
+
+
+// 2Nd Question
+
+const test = [1, 2, 3, 4, 5, [1, 2, 3, 4]];
+const array_clone = (input) => 
+input.slice(0, input.length);
+console.log(array_clone(test));
