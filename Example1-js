@@ -54,3 +54,14 @@ console.log(result3[0][0] + " ( " + result3[0][1]+" " + "times )")
 
 // 12Th Question
 
+const  Number = [2, 3, 4, 5];
+const sum_and_prod = (input) => {
+    let sum = 0;
+    let prod = 1;
+    for (let i = 0; i < input.length; i++) {
+        sum += input[i];
+        prod *= input[i];
+    }
+    return [sum, prod];
+}
+console.log(sum_and_prod(Number));
