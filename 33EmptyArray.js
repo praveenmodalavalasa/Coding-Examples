@@ -1,5 +1,5 @@
-
-
+// 33Th Question
+// Write a JavaScript script to empty an array while keeping the original.
 
 // var arr1 = ['a','b','c','d','e','f'];
 // var arr2 = [];

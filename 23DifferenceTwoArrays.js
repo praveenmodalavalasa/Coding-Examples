@@ -1,5 +1,5 @@
-
-
+// 23Rd Question
+// Write a JavaScript function to find the difference between two arrays.
 
 var a = [1,2,3,4,5,6,7,8,9];
 var b = [2,4,6,8];
